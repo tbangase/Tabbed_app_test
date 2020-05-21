@@ -24,7 +24,7 @@ struct LineChartView: View {
                                height: self.cardHeight)
                         .foregroundColor(self.colorScheme == .dark ? .black : .white)
                         .padding(self.offset)
-                        .shadow(radius: 10)
+                        .shadow(color: self.colorScheme == .dark ? Color.red : Color.gray, radius: 10)
                     
                     VStack {
                         HStack {
@@ -48,7 +48,8 @@ struct LineChartView: View {
                                height: self.cardHeight)
                         .foregroundColor(self.colorScheme == .dark ? .black : .white)
                         .padding(self.offset)
-                        .shadow(radius: 10)
+                        .shadow(color: self.colorScheme == .dark ? Color.red : Color.gray, radius: 10)
+                    //.shadow(radius: 10)
                     
                     VStack {
                         HStack {
@@ -67,12 +68,14 @@ struct LineChartView: View {
                 }.offset(x:-self.offset/4, y:0)
             }
         }
+        .background(colorScheme == .dark ? Color.black : Color.white)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct LineChartView_Previews: PreviewProvider {
     static var previews: some View {
         LineChartView()
-            .environment(\.colorScheme, .light)
+            .environment(\.colorScheme, .dark)
     }
 }

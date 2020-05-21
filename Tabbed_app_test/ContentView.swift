@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
+    @State private var colorScheme: ColorScheme = .dark
  
     var body: some View {
         TabView(selection: $selection){
@@ -22,7 +23,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             LineChartView()
-                .environment(\.colorScheme, .dark)
+                .environment(\.colorScheme, colorScheme)
                 .tabItem {
                     VStack {
                         Image(systemName: "square.stack.3d.down.right")

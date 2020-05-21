@@ -120,22 +120,32 @@ struct LineView: View {
     let dataSet: [[Double]]
     
     var body: some View {
-        VStack {
-            LinePath(dataSet: dataSet)
-                .trim(from: 0, to: showLine ? 1 : 0)
-                .stroke(Color.green , lineWidth: 5)
-                .onAppear(perform: {
+        GeometryReader { geo in
+            VStack {
+                LinePath(dataSet: self.dataSet)
+                    .trim(from: 0, to: self.showLine ? 1 : 0)
+                    .stroke(Color.green , lineWidth: 5)
+                    .onAppear(perform: {
+                        withAnimation(.easeInOut(duration: 2)) {
+                            self.showLine = true
+                        }
+                    })
+                
+                /*Button("Animate") {
                     withAnimation(.easeInOut(duration: 2)) {
-                        self.showLine = true
+                        self.showLine.toggle()
                     }
-                })
-            
-            Button("Animate") {
+                }*/
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                self.showLine = false
                 withAnimation(.easeInOut(duration: 2)) {
-                    self.showLine.toggle()
+                    self.showLine = true
                 }
             }
         }
+        
         
         
     }
