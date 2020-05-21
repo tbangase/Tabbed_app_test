@@ -13,21 +13,20 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
+            IndicatorView()
                 .tabItem {
                     VStack {
-                        Image("first")
-                        Text("First")
+                        Image(systemName: "house.fill")
+                        Text("Indicator")
                     }
                 }
                 .tag(0)
-            Text("Second View")
-                .font(.title)
+            LineChartView()
+                .environment(\.colorScheme, .dark)
                 .tabItem {
                     VStack {
-                        Image("second")
-                        Text("Second")
+                        Image(systemName: "square.stack.3d.down.right")
+                        Text("Line Chart")
                     }
                 }
                 .tag(1)
@@ -36,7 +35,9 @@ struct ContentView: View {
                 .font(.title)
                 .tabItem {
                     VStack {
-                        Image("first")
+                        Image(systemName: "photo")
+                            .scaledToFit()
+                            .overlay(Color.primary)
                         Text("Third")
                     }
                 }
