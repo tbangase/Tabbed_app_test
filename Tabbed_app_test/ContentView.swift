@@ -12,15 +12,17 @@ class CustomEnvironment : ObservableObject {
     @Published var colorScheme: ColorScheme = .dark
 }
 
+
+
 struct ContentView: View {
     @State private var selection = 0
     @State private var colorScheme: ColorScheme = .dark
-    //@Environment(\.colorScheme) var colorScheme
     
     @ObservedObject var env = CustomEnvironment()
+    @ObservedObject var user = UserInformation()
     
     var body: some View {
-        CustomTabView(env: env).environment(\.colorScheme, env.colorScheme)
+        CustomTabView(env: env, user: user).environment(\.colorScheme, env.colorScheme)
     }
 }
 

@@ -34,8 +34,8 @@ struct IndicatorView: View {
                             .repeatForever(autoreverses: false)) {
                                 //self.isAnimation.toggle()
                                 self.animationDegree += 360
-                        }
-                }
+                            }
+                    }
             }
         }
     }

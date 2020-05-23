@@ -153,9 +153,13 @@ struct LineView: View {
 
 struct LineView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleData = [[0.0,0.0], [1.0, 2.0], [2.0, 3.0], [3.0, -1.0]]
+        var sampleData = [[Double]]()
+        
+        for i in 0..<30 {
+            sampleData.append([Double(i), Double.random(in: 0...10)])
+        }
         
         return LineView(dataSet: sampleData)
-            .frame(width: 300, height: 300)
+            .frame(width: 300, height: 200)
     }
 }

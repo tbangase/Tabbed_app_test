@@ -14,6 +14,7 @@ struct CustomTabView: View {
     @Environment(\.colorScheme) var colorScheme
     
     @ObservedObject var env: CustomEnvironment
+    @ObservedObject var user: UserInformation
     
     var body: some View {
         GeometryReader { geo in
@@ -27,7 +28,7 @@ struct CustomTabView: View {
                     }
                     .tag(0)
                 VStack{
-                    LineChartView()
+                    LineCardView()
                         .environment(\.colorScheme, self.env.colorScheme)
                     
                     Button(action: {
@@ -54,14 +55,14 @@ struct CustomTabView: View {
                     }
                     .tag(1)
                 
-                Text("Third View")
-                    .font(.title)
+                LevelCircle(experience: .constant(0.7))
+                    .environment(\.colorScheme, self.env.colorScheme)
                     .tabItem {
                         VStack {
                             Image(systemName: "photo")
                                 .scaledToFit()
                                 .overlay(Color.primary)
-                            Text("Third")
+                            Text("Level Circle")
                         }
                     }
                     .tag(2)
@@ -73,6 +74,6 @@ struct CustomTabView: View {
 struct CustomTabView_Previews: PreviewProvider {
     @ObservedObject var env = CustomEnvironment()
     static var previews: some View {
-        CustomTabView(env: CustomEnvironment()).environment(\.colorScheme, .dark)
+        CustomTabView(env: CustomEnvironment(), user: UserInformation()).environment(\.colorScheme, .dark)
     }
 }

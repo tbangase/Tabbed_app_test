@@ -16,7 +16,9 @@
 		8F14720424485FE70072B858 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F14720224485FE70072B858 /* Model.xcdatamodeld */; };
 		8F1A6A8A245B045800609232 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A6A89245B045800609232 /* IndicatorView.swift */; };
 		8F3DDE04247760590088D2E2 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DDE03247760590088D2E2 /* CustomTabView.swift */; };
-		8FE4373F2476455A0036333A /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4373E2476455A0036333A /* LineChartView.swift */; };
+		8F3DDE062478DC0C0088D2E2 /* LevelCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DDE052478DC0C0088D2E2 /* LevelCircle.swift */; };
+		8F3DDE082478EE800088D2E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3DDE072478EE800088D2E2 /* User.swift */; };
+		8FE4373F2476455A0036333A /* LineCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE4373E2476455A0036333A /* LineCardView.swift */; };
 		8FE43742247645DD0036333A /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE43741247645DD0036333A /* LineView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +34,9 @@
 		8F14720324485FE70072B858 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8F1A6A89245B045800609232 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		8F3DDE03247760590088D2E2 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
-		8FE4373E2476455A0036333A /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		8F3DDE052478DC0C0088D2E2 /* LevelCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCircle.swift; sourceTree = "<group>"; };
+		8F3DDE072478EE800088D2E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8FE4373E2476455A0036333A /* LineCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCardView.swift; sourceTree = "<group>"; };
 		8FE43741247645DD0036333A /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +74,10 @@
 				8F1471F02446E6B40072B858 /* SceneDelegate.swift */,
 				8F1471F22446E6B40072B858 /* ContentView.swift */,
 				8F3DDE03247760590088D2E2 /* CustomTabView.swift */,
+				8F3DDE052478DC0C0088D2E2 /* LevelCircle.swift */,
 				8FE43740247645A00036333A /* LineChart */,
 				8F1A6A89245B045800609232 /* IndicatorView.swift */,
+				8F3DDE072478EE800088D2E2 /* User.swift */,
 				8F1471F42446E6C40072B858 /* Assets.xcassets */,
 				8F1471F92446E6C40072B858 /* LaunchScreen.storyboard */,
 				8F1471FC2446E6C40072B858 /* Info.plist */,
@@ -92,7 +98,7 @@
 		8FE43740247645A00036333A /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
-				8FE4373E2476455A0036333A /* LineChartView.swift */,
+				8FE4373E2476455A0036333A /* LineCardView.swift */,
 				8FE43741247645DD0036333A /* LineView.swift */,
 			);
 			path = LineChart;
@@ -169,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3DDE062478DC0C0088D2E2 /* LevelCircle.swift in Sources */,
 				8F1471EF2446E6B40072B858 /* AppDelegate.swift in Sources */,
 				8F1471F12446E6B40072B858 /* SceneDelegate.swift in Sources */,
 				8F1471F32446E6B40072B858 /* ContentView.swift in Sources */,
@@ -176,7 +183,8 @@
 				8F14720424485FE70072B858 /* Model.xcdatamodeld in Sources */,
 				8F1A6A8A245B045800609232 /* IndicatorView.swift in Sources */,
 				8FE43742247645DD0036333A /* LineView.swift in Sources */,
-				8FE4373F2476455A0036333A /* LineChartView.swift in Sources */,
+				8F3DDE082478EE800088D2E2 /* User.swift in Sources */,
+				8FE4373F2476455A0036333A /* LineCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
